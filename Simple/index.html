@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PathVis: Pathfinding Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Pathfinding Visualizer</h1>
+    <div class="controls">
+      <label>
+        Algorithm
+        <select id="algo">
+          <option value="astar" selected>A*</option>
+          <option value="dijkstra">Dijkstra</option>
+          <option value="bfs">BFS</option>
+          <option value="dfs">DFS</option>
+          <option value="greedy">Greedy Best-First</option>
+        </select>
+      </label>
+
+      <label>
+        Grid
+        <select id="gridSize">
+          <option value="20x35">20 × 35</option>
+          <option value="25x45" selected>25 × 45</option>
+          <option value="30x55">30 × 55</option>
+          <option value="35x65">35 × 65</option>
+        </select>
+      </label>
+
+      <button id="modeStart" class="btn">Set Start</button>
+      <button id="modeEnd" class="btn">Set End</button>
+      <button id="modeWall" class="btn btn-primary">Draw Walls</button>
+      <button id="modeErase" class="btn">Erase</button>
+
+      <button id="run" class="btn btn-accent">Run</button>
+      <button id="pause" class="btn">Pause</button>
+      <button id="reset" class="btn">Reset</button>
+      <button id="clear" class="btn">Clear Walls</button>
+      <button id="random" class="btn">Random Walls</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid"></div>
+    <aside class="metrics">
+      <div><strong>Algo:</strong> <span id="m-algo">Select an Algorithm</span></div>
+      <div><strong>Visited:</strong> <span id="m-visited">0</span></div>
+      <div><strong>Time:</strong> <span id="m-time">0</span> ms</div>
+      <div><strong>Path cost:</strong> <span id="m-cost">0</span></div>
+
+      <div class="legend">
+        <div><span class="chip astar"></span> A*</div>
+        <div><span class="chip dijkstra"></span> Dijkstra</div>
+        <div><span class="chip bfs"></span> BFS</div>
+        <div><span class="chip dfs"></span> DFS</div>
+        <div><span class="chip greedy"></span> Greedy</div>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>© PathVis</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

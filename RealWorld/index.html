@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PathVis</title>
+
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <h1>PathVis</h1>
+
+  <div class="controls">
+    <label for="algo">Algorithm:</label>
+   
+    <select id="algo">
+      <option value="astar" selected>A*</option>
+      <option value="dijkstra">Dijkstra</option>
+      <option value="bfs">BFS</option>
+      <option value="dfs">DFS</option>
+      <option value="greedy">Greedy Best-First</option>
+    </select>
+
+    <button id="start">Start</button>
+    <button id="compare">Compare All</button>
+    <button id="stop">Pause</button>
+    <button id="reset">Reset</button>
+    <button id="clear">Clear All</button>
+    <small class="dim">Click map once for start (green), again for end (red)</small>
+  </div>
+
+  <div id="map"></div>
+
+  <!-- Metrics for current single run -->
+  <div id="metricsBar">
+    <div class="metric"><strong>Algorithm:</strong> <span id="m-algo">—</span></div>
+    <div class="metric"><strong>Visited:</strong> <span id="m-visited">0</span></div>
+    <div class="metric"><strong>Execution time:</strong> <span id="m-time">0</span> ms</div>
+    <div class="metric"><strong>Path cost:</strong> <span id="m-cost">0</span></div>
+
+    <div id="legend">
+      <div class="grad" title="Exploration gradient (early → late)"></div>
+      <div class="chip astar" title="A*"></div>
+      <div class="chip dijkstra" title="Dijkstra"></div>
+      <div class="chip bfs" title="BFS"></div>
+      <div class="chip dfs" title="DFS"></div>
+      <div class="chip greedy" title="Greedy"></div>
+    </div>
+  </div>
+
+  <!-- Comparison results -->
+  <div class="compare">
+    <h2>Comparison Results</h2>
+    <div id="summary" class="summary">Click “Compare All” to compare all algorithms.</div>
+    <table id="results">
+      <thead>
+        <tr>
+          <th>Algorithm</th>
+          <th>Found?</th>
+          <th>Visited</th>
+          <th>Time (ms)</th>
+          <th>Path Cost</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
