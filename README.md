@@ -1,6 +1,3 @@
-# PathVis
-PathVis is a dual-mode web-based pathfinding visualizer featuring animated grid traversal and a Leaflet.js map-based view. It implements BFS, DFS, Dijkstra’s, A*, and Greedy Best-First Search with step-by-step visualizations from a unified landing interface.
-
 # PathVis — Pathfinding Visualizer
 
 PathVis is a web-based pathfinding visualization platform that demonstrates classic graph and shortest-path algorithms through two interactive modes:
