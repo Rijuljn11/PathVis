@@ -62,6 +62,7 @@ This project is suitable for:
 
 ## Learning Outcomes
 
+* Algorithm performance comparison
 * Clear understanding of graph traversal and shortest-path algorithms
 * Practical use of heuristics in pathfinding
 * Frontend state management and animation logic
@@ -73,7 +74,7 @@ This project is suitable for:
 * Diagonal movement support
 * Maze generation algorithms
 * Speed control and step debugging
-* Algorithm performance comparison
+
 
 ## Summary
 
